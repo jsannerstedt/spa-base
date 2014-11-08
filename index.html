@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>Base app</h1>
+    </div>
+    <nav class="navbar navbar-default" role="navigation">
+        <tretton37-menu></tretton37-menu>
+    </nav>
+    <!--ko if: main-->
+    <div role="main" data-bind="component: main" class="container"></div>
+    <!--/ko-->
+</div>
+<script data-main="app" src="bower_components/requirejs/require.js"></script>
+</body>
+</html>

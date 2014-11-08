@@ -1,0 +1,24 @@
+{
+  "name": "spa-base",
+  "version": "0.0.0",
+  "authors": [
+    "Joel Sannerstedt <joel.sannerstedt@gmail.com>"
+  ],
+  "description": "start template for a spa",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockout": "~3.2.0",
+    "requirejs": "~2.1.15",
+    "requirejs-text": "~2.0.12",
+    "grapnel": "~0.4.2"
+  }
+}
