@@ -7,20 +7,20 @@ define([], function () {
         baseUrl: "./",
         paths: {
             knockout: "bower_components/knockout/dist/knockout.debug",
-            text: "bower_components/requirejs-text/text",
-            grapnel: "bower_components/grapnel/dist/grapnel.min"
-
+            text: "bower_components/requirejs-text/text"
         }
     });
 
     require([
         "knockout",
         "shell",
-        "system/componentLoader",
+        "bower_components/componentLoader/componentLoader",
+        "bower_components/componentLoader/customComponents",
         "text"
-    ], function (ko, shell, componentLoader/*text*/) {
+    ], function (ko, shell, componentLoader, customComponents/*text*/) {
 
-       componentLoader.init();
+       componentLoader(ko);
+       customComponents(ko, {componentPrefix: "tretton37", componentDir: "components"});
 
         // start
         ko.applyBindings(shell);

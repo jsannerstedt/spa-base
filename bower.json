@@ -19,6 +19,6 @@
     "knockout": "~3.2.0",
     "requirejs": "~2.1.15",
     "requirejs-text": "~2.0.12",
-    "grapnel": "~0.4.2"
+    "componentLoader": "https://github.com/jsannerstedt/componentLoader.git"
   }
 }

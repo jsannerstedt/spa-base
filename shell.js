@@ -3,17 +3,19 @@
  */
 define([
     "knockout",
-    "system/routing"
-], function (ko, routing) {
+    "bower_components/componentLoader/handleHashChange"
+], function (ko, handleHashChange) {
     var main = ko.observable();
 
-    routing.start(onRoute);
+    handleHashChange(function (path, params) {
+        if (!path) return;
+        main({
+            name: "modules/" + path,
+            params: params
+        });
+    });
 
     return {
         main: main
     };
-
-    function onRoute(config){
-        main(config);
-    }
 });
